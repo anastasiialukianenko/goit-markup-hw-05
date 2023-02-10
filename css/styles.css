@@ -563,3 +563,69 @@ overflow: hidden;
 .portfolio-link:is(:hover,:focus) .overlay{
     transform: translate(0%, 0%);
 }
+
+/*================================ BACKDROP ===============================*/
+.backdrop {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    background-color: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden{
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    width: 408px;
+    height: 576px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal-closet-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+width: 24px;
+height: 24px;
+border-radius: 50%;
+padding: 0;
+
+background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer; 
+}
+.modal-closet-btn-icon{
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-closet-btn:is(:hover,:focus){
+    border: transparent;
+    background-color: #404BBF;
+}
+.modal-closet-btn:is(:hover, :focus) .modal-closet-btn-icon {
+    fill: #FFFFFF;
+}
+
+
+
+/*================================ Modal window ===============================*/
+
